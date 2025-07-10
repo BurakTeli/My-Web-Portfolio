@@ -1,9 +1,9 @@
 .about-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 48px;
-    padding: 64px 10%;
-    flex-wrap: wrap;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 10%;
+  flex-wrap: wrap;
+  padding-top: 120px;
+}

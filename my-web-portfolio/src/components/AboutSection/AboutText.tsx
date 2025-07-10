@@ -4,11 +4,11 @@ import "../../style/components/AboutSection/AboutText.css";
 const AboutText: React.FC = () => {
   return (
     <div className="about-text">
-      <h2>Ben Kimim?</h2>
+      <h2>Merhaba, ben Burak Telli</h2>
       <p>
-        Merhaba! Ben Burak Telli. Full-stack web development, yapay zeka
-        projeleri ve modern tasarım alanlarında çalışıyorum. Yenilikçi çözümler
-        üretmeye ve kullanıcı odaklı arayüzler geliştirmeye odaklanıyorum.
+        Frontend ve yapay zeka projelerinde odaklı çalışan bir geliştiriciyim.
+        Modern teknolojilerle profesyonel çözümler üretmeyi seviyorum. Kullanıcı
+        dostu, hızlı ve sürdürülebilir arayüzler tasarlamaya önem veririm.
       </p>
     </div>
   );
