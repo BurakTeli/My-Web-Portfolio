@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection/AboutSection";
 import InternshipSection from "./components/InternshipSection/InternshipSection";
 import ContactSection from "./components/ContactForm/ContactSection";
 import ScrollElements from "./components/ScrollElements/ScrollElements";
+import Bootcamp from "./pages/Bootcamp/Bootcamp";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AboutSection />
       <InternshipSection />
       <ScrollElements />
+      <Bootcamp />
       <ContactSection />
     </div>
   );

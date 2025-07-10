@@ -1,0 +1,60 @@
+.bootcamp-container {
+  background-image: url("/assets/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 20px;
+  padding: 20px;
+  margin: 40px auto;
+  width: 95%;
+  min-height: 600px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bootcamp-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.large-card {
+  grid-column: span 4;
+  grid-row: span 3;
+}
+
+.frontend-card {
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+}
+
+.netcore-card {
+  grid-column: span 4 / span 4;
+  grid-row: span 3 / span 3;
+  grid-row-start: 4;
+}
+
+.data-card {
+  grid-column: span 2;
+  grid-row: span 2;
+  grid-column-start: 5;
+  grid-row-start: 4;
+}
+
+.bootcamp-card {
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bootcamp-card:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: scale(1.03);
+}

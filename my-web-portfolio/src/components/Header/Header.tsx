@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         <a href="#projects">Projelerim</a>
         <a href="#internships">Stajlarım</a>
         <a href="#references">Referanslarım</a>
-        <a href="#references">Bootcamp</a>
+        <a href="#Bootcamp">Bootcamp</a>
         <a href="#contact">İletişim</a>
       </nav>
     </header>
