@@ -7,10 +7,6 @@ function App() {
     <div>
       <Header />
       <AboutSection />
-      <main style={{ padding: "2rem" }}>
-        <h1>Welcome to Burak Telli's Portfolio</h1>
-        <p>This section will display dynamic content later.</p>
-      </main>
     </div>
   );
 }
