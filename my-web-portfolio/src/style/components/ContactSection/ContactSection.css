@@ -1,24 +1,110 @@
 .contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.social-icons {
-  display: flex;
-  gap: 20px; /* ikonlar büyük olduğu için boşluğu da artırdım */
-}
-
-.icon-img {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  border-radius: 12px; /* istersen 0 yapabilirsin */
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.icon-img:hover {
-  transform: scale(1.05);
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .icon-img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Slight scale effect on hover */
+  .icon-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* GitHub icon bounces while rotating smoothly */
+  .spin-bounce {
+    animation: bounceAndSpin 2s linear infinite;
+  }
+  
+  /* Bounce and rotate animation for GitHub */
+  @keyframes bounceAndSpin {
+    0% {
+      transform: translateY(0) rotateZ(0deg);
+    }
+    10% {
+      transform: translateY(-20px) rotateZ(36deg);
+    }
+    20% {
+      transform: translateY(0) rotateZ(72deg);
+    }
+    30% {
+      transform: translateY(-20px) rotateZ(108deg);
+    }
+    40% {
+      transform: translateY(0) rotateZ(144deg);
+    }
+    50% {
+      transform: translateY(-20px) rotateZ(180deg);
+    }
+    60% {
+      transform: translateY(0) rotateZ(216deg);
+    }
+    70% {
+      transform: translateY(-20px) rotateZ(252deg);
+    }
+    80% {
+      transform: translateY(0) rotateZ(288deg);
+    }
+    90% {
+      transform: translateY(-20px) rotateZ(324deg);
+    }
+    100% {
+      transform: translateY(0) rotateZ(360deg);
+    }
+  }
+  
+  /* LinkedIn icon jumps higher and shifts sideways for dynamic movement */
+  .bounce-random {
+    animation: bounceRandom 2s ease-in-out infinite;
+  }
+  
+  /* Random-like bounce and sideways sway for LinkedIn */
+  @keyframes bounceRandom {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    20% {
+      transform: translateY(-40px) translateX(10px);
+    }
+    40% {
+      transform: translateY(0) translateX(-10px);
+    }
+    60% {
+      transform: translateY(-50px) translateX(15px);
+    }
+    80% {
+      transform: translateY(0) translateX(-15px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  /* Gmail icon performs a simple vertical bounce */
+  .bounce-only {
+    animation: bounceOnly 2s ease-in-out infinite;
+  }
+  
+  /* Classic vertical bounce animation for Gmail */
+  @keyframes bounceOnly {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
