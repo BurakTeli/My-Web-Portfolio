@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../style/components/InternshipSection/InternshipCard.css";
 
 interface InternshipCardProps {
@@ -7,11 +7,20 @@ interface InternshipCardProps {
 }
 
 const InternshipCard: React.FC<InternshipCardProps> = ({ logo, company }) => {
+  const [isToggled, setIsToggled] = useState(false);
+
   return (
     <div className="internship-card">
       <img src={logo} alt={company} className="internship-logo" />
       <h3>{company}</h3>
-      <button className="detail-button">Detay</button>
+
+      {/* Toggle Button */}
+      <div
+        className={`toggle-switch ${isToggled ? "on" : ""}`}
+        onClick={() => setIsToggled(!isToggled)}
+      >
+        <div className="toggle-circle"></div>
+      </div>
     </div>
   );
 };
