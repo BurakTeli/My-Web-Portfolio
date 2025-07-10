@@ -1,9 +1,14 @@
+import React from "react";
+import Header from "./components/Header/Header";
+
 function App() {
   return (
-    // Main wrapper with padding
-    <div style={{ padding: "2rem" }}>
-      <h1>Hello Burak 👋</h1>
-      <p>This page is now fully dark-themed!</p>
+    <div>
+      <Header />
+      <main style={{ padding: "2rem" }}>
+        <h1>Welcome to Burak Telli's Portfolio</h1>
+        <p>This section will display dynamic content later.</p>
+      </main>
     </div>
   );
 }

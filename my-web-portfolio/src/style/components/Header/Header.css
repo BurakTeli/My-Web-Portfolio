@@ -1,0 +1,99 @@
+/* Navbar container with modern, oval look */
+.navbar {
+  width: 90%;
+  margin: 24px auto 0 auto;
+  padding: 16px 32px;
+  background-color: #1f1f22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 16px;
+  z-index: 100;
+  border: 1px solid #2c2c2f;
+  backdrop-filter: blur(6px);
+}
+
+/* Logo text styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation container */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* Link as button (base style) */
+.nav-links a {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 14px;
+  background-color: #2c2c2f;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Hover: keep text white + slightly lighter bg */
+.nav-links a:hover {
+  color: #ffffff;
+  background-color: #3a3a3f;
+}
+
+/* Glowing background on hover */
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  background-size: 600%;
+  border-radius: 20px;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  animation: glowing 20s linear infinite;
+}
+
+/* Hover: show glowing effect */
+.nav-links a:hover::before {
+  opacity: 1;
+}
+
+/* Glowing animation keyframes */
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
