@@ -42,47 +42,43 @@
 .detail-button:hover {
   background-color: #5c5c5c; /* Lighter shade on hover for feedback */
 }
-/* Toggle switch container - stylish and modern */
+/* Toggle switch container */
 .toggle-switch {
-  width: 64px;
-  height: 34px;
-  border-radius: 50px;
-  background-color: #333;
+  width: 60px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #444;
   position: relative;
   cursor: pointer;
   margin: 20px auto 0;
-  transition: background-color 0.4s ease-in-out, box-shadow 0.3s ease;
-  box-shadow: inset 0 0 4px #000, 0 0 6px rgba(0, 255, 180, 0.2);
-  border: 2px solid #555;
+  transition: background-color 0.3s ease-in-out;
+  border: 2px solid #888;
 }
 
-/* Hover effect for more interaction */
-.toggle-switch:hover {
-  box-shadow: 0 0 8px rgba(0, 255, 180, 0.4), 0 0 12px rgba(0, 255, 180, 0.2);
-}
-
-/* Active toggle switch background */
+/* Toggle active state */
 .toggle-switch.on {
-  background: linear-gradient(145deg, #00c887, #00a973);
-  box-shadow: 0 0 12px rgba(0, 255, 180, 0.4), inset 0 0 6px #00724a;
-  border-color: #00a573;
+  background-color: #00c87d;
 }
 
-/* The inner circle (thumb) */
+/* White circular knob */
 .toggle-circle {
-  width: 28px;
-  height: 28px;
-  background: white;
+  width: 26px;
+  height: 26px;
+  background-color: white;
   border-radius: 50%;
   position: absolute;
-  top: 2.5px;
-  left: 2.5px;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
 }
 
-/* Move the circle to the right when active */
+/* Shift circle to right if toggle is ON */
 .toggle-switch.on .toggle-circle {
-  transform: translateX(30px);
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.7), 0 0 12px rgba(0, 255, 180, 0.4);
+  transform: translateX(28px);
+}
+.card-flip {
+  transform: rotateY(180deg);
+  transition: transform 0.6s ease;
+  perspective: 1000px; /* Optional: Adds 3D depth */
+  background-color: #2a2a2a;
 }

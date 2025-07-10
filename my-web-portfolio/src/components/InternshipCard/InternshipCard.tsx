@@ -9,15 +9,20 @@ interface InternshipCardProps {
 const InternshipCard: React.FC<InternshipCardProps> = ({ logo, company }) => {
   const [isToggled, setIsToggled] = useState(false);
 
+  const handleToggle = (e: React.MouseEvent) => {
+    e.stopPropagation(); 
+    setIsToggled(!isToggled);
+  };
+
   return (
-    <div className="internship-card">
+    <div className={`internship-card ${isToggled ? "card-flip" : ""}`}>
       <img src={logo} alt={company} className="internship-logo" />
       <h3>{company}</h3>
 
-      {/* Toggle Button */}
+      {/* Toggle Switch Button */}
       <div
         className={`toggle-switch ${isToggled ? "on" : ""}`}
-        onClick={() => setIsToggled(!isToggled)}
+        onClick={handleToggle}
       >
         <div className="toggle-circle"></div>
       </div>
