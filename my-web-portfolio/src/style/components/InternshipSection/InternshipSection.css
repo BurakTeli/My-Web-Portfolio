@@ -1,0 +1,26 @@
+/* Section wrapper */
+.internship-section {
+  width: 100%;
+  padding: 64px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Section title */
+.internship-section h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Grid for internship cards */
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+}

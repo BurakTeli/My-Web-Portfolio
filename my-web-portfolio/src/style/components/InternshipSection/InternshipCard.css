@@ -1,0 +1,44 @@
+/* Container for each internship card */
+.internship-card {
+  background-color: #2a2a2a; /* Dark background for contrast and modern feel */
+  border-radius: 24px; /* Rounded corners for a softer, elegant look */
+  padding: 32px; /* Inner spacing for better layout and breathing room */
+  width: 100%;
+  max-width: 400px; /* Ensures cards are visually balanced on large screens */
+  text-align: center; /* Centers all content inside the card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Depth effect for card elevation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+}
+
+/* Company logo styling inside the card */
+.internship-logo {
+  width: 100%; /* Logo takes full card width */
+  height: 320px; /* Increased height for better visibility of company logos */
+  object-fit: contain; /* Prevents logo distortion, maintains aspect ratio */
+  border-radius: 18px; /* Slight rounding for modern aesthetics */
+  margin-bottom: 20px; /* Spacing between logo and company name */
+}
+
+/* Company name below the logo */
+.internship-card h3 {
+  color: #ffffff; /* White text for high contrast */
+  font-size: 1.4rem; /* Clear and readable size */
+  margin-bottom: 20px; /* Space between name and button */
+}
+
+/* "Detail" button styling */
+.detail-button {
+  padding: 12px 28px; /* Comfortable clickable size */
+  background-color: #3a3a3a; /* Neutral tone to match dark theme */
+  color: #ffffff; /* White text for readability */
+  font-weight: 500; /* Slightly bold for emphasis */
+  border: none; /* Flat design without border */
+  border-radius: 14px; /* Smooth button shape */
+  cursor: pointer; /* Shows pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the button */
+.detail-button:hover {
+  background-color: #5c5c5c; /* Lighter shade on hover for feedback */
+}
