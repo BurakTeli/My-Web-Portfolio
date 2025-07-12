@@ -6,6 +6,7 @@ import ContactSection from "./components/ContactForm/ContactSection";
 import ScrollElements from "./components/ScrollElements/ScrollElements";
 import Bootcamp from "./pages/Bootcamp/Bootcamp";
 import Projects from "./pages/Projects";
+import Achievements from "./pages/achievements";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ScrollElements />
       <Bootcamp />
       <Projects />
+      <Achievements />
       <ContactSection />
     </div>
   );
