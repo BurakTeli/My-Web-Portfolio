@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Base Styles */
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #1e1e1e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Center Title Utility */
+.center-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Header Section */
+.references-header {
+  width: min(1200px, 90vw);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  height: 0;
+  flex-wrap: wrap;
+}
+
+.references-header h1 {
+  font-family: "Karantina", cursive;
+  font-size: 16vw;
+  line-height: 0.8em;
+}
+
+.references-header .author {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.references-header h3 {
+  font-family: "Karantina", cursive;
+  font-size: 5vw;
+}
+
+.references-header .author div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.references-header .author div p:nth-child(2) {
+  font-weight: 500;
+}
+
+.references-header .author img {
+  width: 250px;
+}
+
+/* Banner Section */
+.banner {
+  margin-top: -50px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.product {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 170px;
+  z-index: 2;
+  width: 500px;
+  transition: 0.7s;
+}
+
+.product .soda {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.soda {
+  --left: 0px;
+  background: var(--url) var(--left),
+    url("/assets/images/references/mockup.png") 0 0;
+  background-size: auto 100%;
+  width: 280px;
+  aspect-ratio: 2 / 4;
+  background-blend-mode: multiply;
+  transition: 0.8s;
+  mask-image: url("/assets/images/references/mockup.png");
+  mask-size: auto 100%;
+}
+
+.soda:nth-child(2) {
+  opacity: 0;
+}
+
+.product:hover {
+  bottom: 300px;
+}
+
+.product:hover .soda:nth-child(2) {
+  opacity: 1;
+  --left: 500px;
+}
+
+.product:hover .soda:nth-child(1) {
+  opacity: 0;
+  --left: 500px;
+}
+
+/* Rock Decorations */
+.rock {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.rock img:nth-child(1) {
+  position: absolute;
+  height: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+.rock img:nth-child(2) {
+  position: absolute;
+  height: 50%;
+  left: 0;
+  bottom: 0;
+  transition: 0.7s;
+}
+
+.rock img:nth-child(3) {
+  position: absolute;
+  height: 60%;
+  right: 0;
+  bottom: -100px;
+  rotate: -25deg;
+  transition: 0.7s;
+}
+
+/* NEW: Rock4 custom placement */
+.rock img.rock4 {
+  position: absolute;
+  height: 120px;
+  left: 50px;
+  bottom: 200px;
+  z-index: 2;
+  transition: 0.7s;
+}
+
+/* Rock Animations on Hover */
+.banner:has(.product:hover) .rock img:nth-child(1) {
+  transform: translateX(-50%) translateY(50px);
+}
+
+.banner:has(.product:hover) .rock img:nth-child(2) {
+  transform: translateX(-100px) translateY(100px);
+}
+
+.banner:has(.product:hover) .rock img:nth-child(3) {
+  transform: translateX(100px) translateY(100px);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1023px) {
+  .soda {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .soda {
+    width: 250px;
+  }
+
+  .references-header img {
+    display: none;
+  }
+
+  .references-header .author {
+    width: 100%;
+  }
+}
